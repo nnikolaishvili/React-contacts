@@ -32,6 +32,9 @@ class NewContact extends Component {
     if (!this.state.phone.match(phoneReg)) {
       errors.push("phone must contain only numbers");
     }
+    if(this.state.phone !== "" && this.state.phone.length < 8){
+      errors.push("phone must contain minimum 9 numbers");
+    }
 
     this.setState({ errors });
     return errors.length === 0;
