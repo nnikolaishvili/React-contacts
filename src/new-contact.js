@@ -17,14 +17,20 @@ class NewContact extends Component {
   validate = () => {
     let errors = [];
     let phoneReg = /^[0-9]*$/g;
-    if ((this.state.email || this.state.name || this.state.phone) === "") {
-      errors.push("Fields are required");
+    if(this.state.name === ""){
+      errors.push("name field is required");
     }
-    if (!this.state.email.includes("@")) {
-      errors.push("It is not valid email");
+    if(this.state.phone === ""){
+      errors.push("phone field is required");
+    }
+    if(this.state.email === ""){
+      errors.push("email field is required");
+    }
+    if (this.state.email && !this.state.email.includes("@")) {
+      errors.push("mail does not have correct format");
     }
     if (!this.state.phone.match(phoneReg)) {
-      errors.push("Phone field must contain only numbers");
+      errors.push("phone must contain only numbers");
     }
 
     this.setState({ errors });
