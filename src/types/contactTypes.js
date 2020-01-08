@@ -1,0 +1,4 @@
+export const SAVE_CONTACT = "SAVE_CONTACT";
+export const SEARCH_CONTACT = "SEARCH_CONTACT";
+export const EDIT_CONTACT = "EDIT_CONTACT";
+export const DELETE_CONTACT = "DELETE_CONTACT";
